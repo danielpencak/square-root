@@ -11,12 +11,12 @@ function App() {
 
   const handleNumberToFindSquareRootOfChange = (e: SyntheticEvent): void => {
     const target = e.target as HTMLInputElement;
-    setNumberToTakeSquareRootOf(Number.parseFloat(target.value));
+    setNumberToTakeSquareRootOf(!!target.value ? Number.parseFloat(target.value) : null);
   };
 
   const handlePrecisionChange = (e: SyntheticEvent): void => {
     const target = e.target as HTMLInputElement;
-    setPrecision(Number.parseFloat(target.value));
+    setPrecision(!!target.value ? Number.parseFloat(target.value) : null);
   };
 
   // Reference: https://stackoverflow.com/questions/52468506/how-to-calculate-the-square-root-without-using-library-and-built-in-methods-in-j
